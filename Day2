@@ -1,0 +1,32 @@
+//Create a JavaScript program that defines a function called "multiplyByTwo" that takes one parameter: "num". The function should return the input number multiplied by two.
+function multiplyByTwo(num) {
+  return num * 2;
+}
+
+
+//Create a JavaScript program that defines a function called "divideByTwo" that takes one parameter: "num". The function should return the input number divided by two.
+function divideByTwo(num) {
+  return num / 2;
+}
+
+
+//A function “findprime” is given with a parameter . Your function should print out all the function from 1 till the number present in the argument . 
+
+function findprime(num) {
+  // Loop through all numbers from 2 to num
+  for (let i = 2; i <= num; i++) {
+    let isPrime = true;
+    // Check if the current number i is prime
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    // If the current number is prime, print it out
+    if (isPrime) {
+      console.log(i);
+    }
+  }
+}
+
