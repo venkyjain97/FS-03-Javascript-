@@ -1,0 +1,40 @@
+// Define shoppingList array and populate it
+const shoppingList = ["apples", "milk", "bread", "cheese", "eggs"];
+
+// Loop through the array and display each item
+shoppingList.forEach(item => {
+  console.log(item);
+});
+
+// Add an item to the end of the array
+shoppingList.push("juice");
+
+// Remove the last item from the array
+shoppingList.pop();
+
+// Remove the first item from the array
+shoppingList.shift();
+
+// Add an item to the beginning of the array
+shoppingList.unshift("bananas");
+
+// Create a new array with items with less than six characters
+const shortList = shoppingList.filter(item => item.length < 6);
+
+// Create a new array with capitalised first letters
+const capitalList = shoppingList.map(item => item.charAt(0).toUpperCase() + item.slice(1));
+
+// Calculate total number of characters in all items
+const totalChars = shoppingList.reduce((total, item) => total + item.length, 0);
+
+// Create a new array with first three items
+const partialList = shoppingList.slice(0, 3);
+
+// Remove second and third items from the original list
+shoppingList.splice(1, 2);
+
+// Sort remaining items in alphabetical order
+shoppingList.sort();
+
+// Display sorted list
+console.log(shoppingList);
