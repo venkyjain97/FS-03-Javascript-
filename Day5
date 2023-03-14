@@ -1,0 +1,28 @@
+let sentence = "The quick brown fox jumps over the lazy dog and learns JavaScript";
+
+console.log("The length of the string is: ", sentence.length);
+
+let indexE = sentence.indexOf("e");
+console.log("The index of first occurrence of 'e' is: ", indexE);
+
+let firstWord = sentence.slice(0, sentence.indexOf(" "));
+console.log("The first word in the sentence is: ", firstWord);
+
+let lastWord = sentence.substring(sentence.lastIndexOf(" ") + 1);
+console.log("The last word in the sentence is: ", lastWord);
+
+let hasJS = sentence.includes("JavaScript");
+console.log("The sentence contains the word 'JavaScript': ", hasJS);
+
+let newSentence = sentence.replace("JavaScript", "Python");
+console.log("The new sentence is: ", newSentence);
+
+let words = sentence.split(" ");
+console.log("The words in the sentence are: ", words);
+
+let capitalList = words.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+console.log("The capitalised sentence is: ", capitalList);
+
+let message = `The original sentence is "${sentence}". 
+The index of first occurrence of 'e' is ${indexE}, the length of the sentence is ${sentence.length}, and the last word in the sentence is "${lastWord}".`;
+console.log(message);
