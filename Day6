@@ -1,0 +1,39 @@
+// Define the variable "num"
+let num = 16;
+
+// Calculate the square root of "num"
+console.log(Math.sqrt(num));
+
+// Generate a random number between 0 and 1, multiply by 10 and round to nearest whole number
+console.log(Math.round(Math.random() * 10));
+
+// Create a new date object called "today" and display the current date and time
+let today = new Date();
+console.log(today);
+
+// Use getter functions to extract and display year, month (numeric format), day of the month, and day of the week (numeric format)
+console.log(today.getFullYear());
+console.log(today.getMonth());
+console.log(today.getDate());
+console.log(today.getDay());
+
+// Use setter functions to update year to 2022, month to December, and day of the month to 31
+today.setFullYear(2022);
+today.setMonth(11); // December is 11 (0-indexed)
+today.setDate(31);
+
+// Use getter functions to extract and display updated year, month (numeric format), and day of the month
+console.log(today.getFullYear());
+console.log(today.getMonth());
+console.log(today.getDate());
+
+// Create a new date object called "birthday" and set year, month, and day of the month to your own birthday
+let birthday = new Date('2000-08-01');
+
+// Calculate the number of milliseconds between "birthday" and "today"
+console.log(today.getTime() - birthday.getTime());
+
+// Calculate the number of days between "birthday" and "today"
+let diffTime = today.getTime() - birthday.getTime();
+let diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+console.log(diffDays);
