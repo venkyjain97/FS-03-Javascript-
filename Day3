@@ -1,0 +1,52 @@
+// Define the person object
+var person = {
+  name: "Venky",
+  age: 24,
+  email: "john@example.com",
+  hobbies: ["reading", "swimming", "coding"]
+};
+
+// Display the entire object in the console
+console.log(person);
+
+// Add a new property using dot notation
+person.location = "Delhi";
+
+// Update the email property using square bracket notation
+person["email"] = "venkateshjain97@gmail.com";
+
+// Define the nested family object
+person.family = {
+  mother: {name: "Anna", age: 38},
+  father: {name: "john", age: 48},
+  siblings: [
+    {name: "Mary", age: 25},
+    {name: "Peter", age: 20},
+    {name: "Lisa", age: 18}
+  ]
+};
+
+// Display the entire object, including the nested family object
+console.log(person);
+
+// Define the greet function and assign it as a method of the person object
+function greet(name) {
+  console.log("Hello, " + name + "! My name is " + this.name + ".");
+}
+
+person.greet = greet;
+
+// Display the original and cloned objects in the console
+var shallowClone = Object.assign({}, person);
+console.log(person);
+console.log(shallowClone);
+
+// Display the original and deep-cloned objects in the console
+var deepClone = JSON.parse(JSON.stringify(person));
+console.log(person);
+console.log(deepClone);
+
+// Display the keys, values, and key-value pairs of the person object in the console
+console.log(Object.keys(person));
+console.log(Object.values(person));
+console.log(Object.entries(person));
