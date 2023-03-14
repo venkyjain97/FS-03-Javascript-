@@ -1,2 +1,14 @@
+//Write a JavaScript program that defines a variable called "message" and assigns it the value "Hello, world!". Use console.log() to display the message in the console.
+
+
 var message = "Hello, world!";
 console.log(message);
+
+
+//Then, modify the program to define another variable called "name" and assign it your own name. Use console.log() to display a personalised message that includes both the "message" variable and the "name" variable.
+
+
+var message = "Hello, world!";
+var name = "John";
+
+console.log(message + " My name is " + name + ".");
